@@ -18,11 +18,22 @@ namespace Krishna_991590578_Midterm
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ABCBookstoreKrishna : Window
     {
-        public MainWindow()
+        public ABCBookstoreKrishna()
         {
             InitializeComponent();
+        }
+        private void btnFunctionPage_Click(object sender, RoutedEventArgs e)
+        {
+            BookManagement bookManagement = new BookManagement();
+            bookManagement.Show();
+            this.Close();
+        }
+
+        private void btnLandingExit_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

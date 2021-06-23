@@ -5,14 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Krishna_991590578_Midterm"
         mc:Ignorable="d"
-        Title="ABC Bookstore Krishna" Height="450" Width="800">
-    <Grid>
+        Title="ABC Bookstore Krishna" Height="450" Width="800" Background="LightSkyBlue">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnLandingExit" Content="EXIT" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="134" FontWeight="Bold" FontSize="20" Click="btnLandingExit_Click" Background="IndianRed"
+                        />
+                <Separator Width="490"/>
+                <Button x:Name="btnFunctionPage" Content="Book Mangement" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="164" FontWeight="Bold" FontSize="18" Click="btnFunctionPage_Click" Background="HotPink"/>
+            </StackPanel>
+        </StackPanel>
         <Label x:Name="lblMain" Content="ABC Bookstore Info. System&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Height="49" Margin="176,71,0,0" VerticalAlignment="Top" Width="428" FontSize="30" FontWeight="Bold"/>
         <Label x:Name="lblContent" Content="Developed By" HorizontalAlignment="Left" Height="43" Margin="305,138,0,0" VerticalAlignment="Top" Width="162" FontStyle="Italic" FontSize="24" FontFamily="Bahnschrift"/>
         <Label x:Name="lblName" Content="Krishna Taneja" HorizontalAlignment="Left" Height="47" Margin="305,197,0,0" VerticalAlignment="Top" Width="177" FontSize="24" FontStyle="Italic" FontFamily="Bodoni MT"/>
-        <Button x:Name="btnExit" Content="EXIT" HorizontalAlignment="Left" Height="32" Margin="642,392,0,0" VerticalAlignment="Top" Width="148" FontWeight="Bold" FontSize="20"/>
-        <Button x:Name="btnFunctionPage" Content="Book Mangement" HorizontalAlignment="Left" Height="32" Margin="10,392,0,0" VerticalAlignment="Top" Width="164" FontWeight="Bold" FontSize="18"/>
         <Label x:Name="lblID" Content="991590578" HorizontalAlignment="Left" Height="40" Margin="327,249,0,0" VerticalAlignment="Top" Width="140" FontSize="20" FontStyle="Italic" FontFamily="Segoe UI Symbol"/>
-
     </Grid>
+
+    
 </Window>

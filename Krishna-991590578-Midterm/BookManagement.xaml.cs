@@ -15,9 +15,9 @@ namespace Krishna_991590578_Midterm
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class BookManagement : Window
     {
-        public Window1()
+        public BookManagement()
         {
             InitializeComponent();
         }
