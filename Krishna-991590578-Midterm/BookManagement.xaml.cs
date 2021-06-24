@@ -73,19 +73,36 @@ namespace Krishna_991590578_Midterm
         {
             int eISBN = Convert.ToInt32(txtBoxEnterISBN.Text);
             double ePrice = Convert.ToDouble(txtBoxEnterPrice.Text);
+            int count = 0;
 
             foreach (Book b in books)
             {
                 if(b.ISBN==eISBN)
                 {
                     b.Price = ePrice;
+                    count = 0;
                     MessageBox.Show("Price Updated");
+                    break;
                 }
-                else
+                else if(b.ISBN != eISBN)
                 {
-                    MessageBox.Show("No Book Found");
+                    count = 1;
                 }
             }
+            if(count>0)
+            MessageBox.Show("No Book Found");
+        }
+
+        private void btnFunctionExit_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnLandingPage_Click(object sender, RoutedEventArgs e)
+        {
+            ABCBookstoreKrishna bookstore = new ABCBookstoreKrishna();
+            bookstore.Show();
+            this.Close();
         }
     }
 }
