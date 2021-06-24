@@ -39,12 +39,22 @@
                 <StackPanel Background="Khaki">
                     <Label x:Name="lblSHowBook" Content="Books List" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                     <DataGrid x:Name="dGridBooksList" Height="287" Loaded="dGridBooksList_Loaded" Unloaded="dGridBooksList_Unloaded">
-                        
                     </DataGrid>
                 </StackPanel>
             </TabItem>
-            <TabItem x:Name="tabSearchBook" Header="Search Book">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem x:Name="tabSearchBook" Header="Search Book" FontSize="20" FontWeight="Bold" Background="DeepPink">
+                <Canvas Background="SeaGreen">
+                    <GroupBox x:Name="gBoxCGenre" Header="Choose Genre" Height="215" Width="780" BorderThickness="3" BorderBrush="Red">
+                        <StackPanel HorizontalAlignment="Center" Height="218" Width="200">
+                            <RadioButton x:Name="rBtnCSports" Content="Sports"/>
+                            <RadioButton x:Name="rBtnCFiction" Content="Fiction"/>
+                            <RadioButton x:Name="rBtnCSciFi" Content="Sci-Fi"/>
+                            <Separator Height="40" Background="Transparent"></Separator>
+                            <Button x:Name="btnFind" Content="Find By Genre" Height="32" Width="150" Click="btnFind_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <ListBox x:Name="lstBoxSearchBook" ItemsSource="{Binding}" Height="150" Width="750" Canvas.Top="215" Canvas.Left="15" Background="SeaGreen" BorderBrush="DarkBlue"/>
+                </Canvas>
             </TabItem>
             <TabItem x:Name="tabEditBook" Header="Edit Book">
                 <Grid Background="#FFE5E5E5"/>

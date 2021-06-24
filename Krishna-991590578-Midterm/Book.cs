@@ -10,5 +10,10 @@ namespace Krishna_991590578_Midterm
         public string Genre { get; set; }
         public int ISBN { get; set; }
         public double Price { get; set; }
+
+        public override string ToString()
+        {
+            return "Title: " + Title + ", Genre: " + Genre + ", ISBN: " + ISBN;
+        }
     }
 }

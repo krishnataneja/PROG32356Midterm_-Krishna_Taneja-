@@ -50,5 +50,23 @@ namespace Krishna_991590578_Midterm
         {
             dGridBooksList.ItemsSource = null;
         }
+
+        private void btnFind_Click(object sender, RoutedEventArgs e)
+        {
+            List<Book> tmpBooks = new List<Book>();
+            string genre = null;
+            if (rBtnCSports.IsChecked == true) genre = rBtnCSports.Content.ToString();
+            else if (rBtnCFiction.IsChecked == true) genre = rBtnCFiction.Content.ToString();
+            else genre = rBtnCSciFi.Content.ToString();
+
+            foreach (Book b in books)
+            {
+                if(b.Genre.Equals(genre, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    tmpBooks.Add(b);
+                }
+            }
+            lstBoxSearchBook.DataContext = tmpBooks;
+        }
     }
 }
