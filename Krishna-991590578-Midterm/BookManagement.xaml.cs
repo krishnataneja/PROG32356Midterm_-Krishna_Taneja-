@@ -68,5 +68,24 @@ namespace Krishna_991590578_Midterm
             }
             lstBoxSearchBook.DataContext = tmpBooks;
         }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            int eISBN = Convert.ToInt32(txtBoxEnterISBN.Text);
+            double ePrice = Convert.ToDouble(txtBoxEnterPrice.Text);
+
+            foreach (Book b in books)
+            {
+                if(b.ISBN==eISBN)
+                {
+                    b.Price = ePrice;
+                    MessageBox.Show("Price Updated");
+                }
+                else
+                {
+                    MessageBox.Show("No Book Found");
+                }
+            }
+        }
     }
 }

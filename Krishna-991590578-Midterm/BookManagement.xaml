@@ -56,8 +56,16 @@
                     <ListBox x:Name="lstBoxSearchBook" ItemsSource="{Binding}" Height="150" Width="750" Canvas.Top="215" Canvas.Left="15" Background="SeaGreen" BorderBrush="DarkBlue"/>
                 </Canvas>
             </TabItem>
-            <TabItem x:Name="tabEditBook" Header="Edit Book">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem x:Name="tabEditBook" Header="Edit Book" FontSize="20" FontWeight="Bold" Background="IndianRed">
+                <Canvas Background="BurlyWood">
+                    <Label x:Name="lblEditBook" Content="Edit Price of the Book" FontWeight="Bold" FontSize="35" Width="788" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="lblEnterISBN" Content="Enter ISBN: " Canvas.Top="70"/>
+                    <TextBox x:Name="txtBoxEnterISBN" Canvas.Top="75" Canvas.Left="190" Width="100"/>
+                    <Label x:Name="lblEnterPrice" Content="Enter New Price:" Canvas.Top="120"/>
+                    <TextBox x:Name="txtBoxEnterPrice" Canvas.Top="125" Canvas.Left="190" Width="100"/>
+                    <Button x:Name="btnUpdate" Content="Update" Canvas.Left="190" Canvas.Top="182" Width="90" Click="btnUpdate_Click"/>
+
+                </Canvas>
             </TabItem>
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5"/>
