@@ -32,12 +32,23 @@ namespace Krishna_991590578_Midterm
 
             Book book = new Book()
             {
-                BTitle = txtBTitle.Text,
-                BGenre = genre,
-                BISBN = Convert.ToInt32(txtBISBN.Text),
-                BPrice = Convert.ToDouble(txtBPrice.Text)
+                Title = txtBTitle.Text,
+                Genre = genre,
+                ISBN = Convert.ToInt32(txtBISBN.Text),
+                Price = Convert.ToDouble(txtBPrice.Text)
             };
             books.Add(book);
+            MessageBox.Show("New Book Added");
+        }
+
+        private void dGridBooksList_Loaded(object sender, RoutedEventArgs e)
+        {
+            dGridBooksList.ItemsSource = books;
+        }
+
+        private void dGridBooksList_Unloaded(object sender, RoutedEventArgs e)
+        {
+            dGridBooksList.ItemsSource = null;
         }
     }
 }

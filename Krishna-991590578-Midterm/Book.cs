@@ -6,9 +6,9 @@ namespace Krishna_991590578_Midterm
 {
     class Book
     {
-        public string BTitle { get; set; }
-        public string BGenre { get; set; }
-        public int BISBN { get; set; }
-        public double BPrice { get; set; }
+        public string Title { get; set; }
+        public string Genre { get; set; }
+        public int ISBN { get; set; }
+        public double Price { get; set; }
     }
 }

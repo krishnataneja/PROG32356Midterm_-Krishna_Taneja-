@@ -35,8 +35,13 @@
                     <Button x:Name="btnAddBook" Content="Add" Canvas.Left="506" Canvas.Top="263" Width="87" Click="btnAddBook_Click"></Button>
                 </Canvas>
             </TabItem>
-            <TabItem x:Name="tabShowBooks" Header="Show Books">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem x:Name="tabShowBooks" Header="Show Books" FontSize="20" FontWeight="Bold" Background="PaleGreen">
+                <StackPanel Background="Khaki">
+                    <Label x:Name="lblSHowBook" Content="Books List" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <DataGrid x:Name="dGridBooksList" Height="287" Loaded="dGridBooksList_Loaded" Unloaded="dGridBooksList_Unloaded">
+                        
+                    </DataGrid>
+                </StackPanel>
             </TabItem>
             <TabItem x:Name="tabSearchBook" Header="Search Book">
                 <Grid Background="#FFE5E5E5"/>
