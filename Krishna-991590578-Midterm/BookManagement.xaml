@@ -7,6 +7,46 @@
         mc:Ignorable="d"
         Title="Book Management" Height="450" Width="800">
     <Grid>
-        
+        <TabControl>
+            <TabItem x:Name="tabInsertBook" Header="Insert Book" FontWeight="Bold" FontSize="20" Background="LightSkyBlue">
+                <Canvas Background="AntiqueWhite">
+                    <Label x:Name="lblInsert" Content="Insert a Book" Canvas.Left="300" Canvas.Top="10" FontSize="28" FontFamily="Bell MT" FontWeight="Bold"/>
+                    <StackPanel Orientation="Horizontal" Canvas.Left="10" Canvas.Top="50">
+                        <Label x:Name="lblBTitle" Content="Enter Book Title:" Width="180"/>
+                        <TextBox x:Name="txtBTitle" Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Canvas.Left="10" Canvas.Top="100">
+                        <GroupBox x:Name="gBoxBGenre" Header="Genre" Width="100" BorderThickness="3" BorderBrush="Black">
+                            <StackPanel>
+                                <RadioButton x:Name="rBtnSports" Content="Sports"/>
+                                <RadioButton x:Name="rBtnFiction" Content="Fiction"/>
+                                <RadioButton x:Name="rBtnSciFi" Content="Sci-Fi"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Canvas.Left="10" Canvas.Top="210">
+                        <Label x:Name="lblBISBN" Content="Enter ISBN:" Width="180"/>
+                        <TextBox x:Name="txtBISBN" Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Canvas.Left="10" Canvas.Top="260">
+                        <Label x:Name="lblBPrice" Content="Enter Price:" Width="180"/>
+                        <TextBox x:Name="txtBPrice" Width="200"/>
+                    </StackPanel>
+                    <Button x:Name="btnAddBook" Content="Add" Canvas.Left="506" Canvas.Top="263" Width="87" Click="btnAddBook_Click"></Button>
+                </Canvas>
+            </TabItem>
+            <TabItem x:Name="tabShowBooks" Header="Show Books">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tabSearchBook" Header="Search Book">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tabEditBook" Header="Edit Book">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

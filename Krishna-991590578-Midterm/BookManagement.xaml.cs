@@ -17,9 +17,27 @@ namespace Krishna_991590578_Midterm
     /// </summary>
     public partial class BookManagement : Window
     {
+        List<Book> books = new List<Book>();
         public BookManagement()
         {
             InitializeComponent();
+        }
+
+        private void btnAddBook_Click(object sender, RoutedEventArgs e)
+        {
+            string genre = null;
+            if (rBtnSports.IsChecked == true) genre = rBtnSports.Content.ToString();
+            else  if (rBtnFiction.IsChecked == true) genre = rBtnFiction.Content.ToString();
+            else genre = rBtnSciFi.Content.ToString();
+
+            Book book = new Book()
+            {
+                BTitle = txtBTitle.Text,
+                BGenre = genre,
+                BISBN = Convert.ToInt32(txtBISBN.Text),
+                BPrice = Convert.ToDouble(txtBPrice.Text)
+            };
+            books.Add(book);
         }
     }
 }
